@@ -72,6 +72,7 @@ void setup()  {
   // init SD cardreader
   if (!SD.begin(chipSelect)) {
     Serial.println("Card failed, or not present");
+    lcd.setCursor(0, 3);
     lcd.print("SD-card reader!!");
     // don't do anything more:
     while (1);
